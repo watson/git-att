@@ -23,10 +23,10 @@ npm install -g git-att
 
 ```
 $ git att
-branch: master
+branch: patch-1
 ahead: 10
 dirty: 2
-untracked: 0
+untracked: 1
 ```
 
 ## Docs

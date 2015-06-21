@@ -35,7 +35,10 @@ git.check(process.cwd(), function (err, result) {
   delete result.issues
 
   Object.keys(result).forEach(function (key) {
-    log.info('%s %s', key, result[key])
+    var value = result[key]
+    if (key === 'branch' && value === 'master') return
+    if (typeof key === 'number' && value === 0) return
+    log.info('%s %s', key, value)
   })
   process.exit(1)
 })
