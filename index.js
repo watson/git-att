@@ -17,7 +17,7 @@ var log = {
 if (argv.version || argv.v) return version()
 if (argv.help || argv.h) return help()
 
-if (!git.isGit(process.cwd())) {
+if (!git.isGitSync(process.cwd())) {
   log.error('No git repository detected - aborting...')
   process.exit(1)
   return
