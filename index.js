@@ -38,7 +38,7 @@ git.check(process.cwd(), function (err, result) {
     var value = result[key]
     if (key === 'branch' && value === 'master') return
     if (typeof key === 'number' && value === 0) return
-    log.info('%s %s', key, value)
+    log.info('%s: %s', key, value)
   })
   process.exit(1)
 })
