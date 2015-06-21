@@ -11,8 +11,6 @@ Check if the current git project needs attention by checking the following:
 If the answer is yes to any of those questions, this module will let you
 know.
 
-[![Build status](https://travis-ci.org/watson/git-att.svg?branch=master)](https://travis-ci.org/watson/git-att)
-
 ## Installation
 
 Install git-att globally:
