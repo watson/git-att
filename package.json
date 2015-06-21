@@ -5,16 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "after-all-results": "^2.0.0",
-    "columnify": "^1.5.1",
-    "minimist": "^1.1.1",
-    "patterns": "^1.0.2"
+    "git-state": "^1.0.1",
+    "minimist": "^1.1.1"
   },
-  "devDependencies": {
-    "mkdirp": "^0.5.1",
-    "tape": "^4.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "tape test/*"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "git-att": "index.js"
