@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "after-all-results": "^2.0.0",
-    "git-state": "^2.0.0",
+    "git-state": "^3.0.0",
     "minimist": "^1.2.0"
   },
   "devDependencies": {},

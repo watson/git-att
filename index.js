@@ -5,6 +5,8 @@ var git = require('git-state')
 var argv = require('minimist')(process.argv.slice(2))
 var pkg = require('./package')
 
+var VALID_BRANCHES = ['master', 'gh-pages']
+
 var log = {
   info: function () {
     if (!argv.quiet && !argv.q) console.log.apply(console.log, arguments)
@@ -26,7 +28,11 @@ if (!git.isGitSync(process.cwd())) {
 git.check(process.cwd(), function (err, result) {
   if (err) throw err
 
-  if (!result.issues) {
+  var issues = Boolean(!~VALID_BRANCHES.indexOf(result.branch) ||
+                       result.ahead || Number.isNaN(result.ahead) ||
+                       result.dirty || result.untracked || result.stashes)
+
+  if (!issues) {
     log.info('Everything looks good :)')
     process.exit()
     return
