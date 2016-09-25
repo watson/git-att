@@ -1,6 +1,6 @@
 {
   "name": "git-att",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Check if any of your git projects needs attention",
   "main": "index.js",
   "dependencies": {
@@ -41,7 +41,7 @@
   "homepage": "https://github.com/watson/git-att",
   "preferGlobal": true,
   "coordinates": [
-    41.326297497465866,
-    -72.91859115244142
+    41.32621911952859,
+    -72.91858106778562
   ]
 }
