@@ -16,13 +16,19 @@ var log = {
   }
 }
 
-if (argv.version || argv.v) return version()
-if (argv.help || argv.h) return help()
+if (argv.version || argv.v) {
+  version()
+  process.exit()
+}
+
+if (argv.help || argv.h) {
+  help()
+  process.exit()
+}
 
 if (!git.isGitSync(process.cwd())) {
   log.error('No git repository detected - aborting...')
   process.exit(1)
-  return
 }
 
 git.check(process.cwd(), function (err, result) {
